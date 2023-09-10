@@ -1,0 +1,86 @@
+body {
+    background: rgb(68, 38, 28);
+    color: rgba(30, 255, 161, 0.849);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+audio {
+    border-color: rgba(30, 255, 161, 0.849);
+    border-style: double;
+    border-radius: 50%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: bottom 2px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    display: flex;
+    width: 200px;
+    height: auto;
+    border-radius: 100px;
+    border-style: double;
+    border-color: rgba(30, 255, 161, 0.849);;
+}
+
+p {
+    padding-bottom: 75px;
+    max-width: 30%;
+}
+
+.C {
+    background-color: rgba(255, 255, 255, 0.233);
+    min-width: 20%;
+    border-style: double;
+    border-color: rgba(30, 255, 161, 0.849);
+    padding: 10px;
+    float: left;
+}
+
+.D {
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.233);
+    min-width: 20%;
+    border-style: double;
+    border-color: rgba(30, 255, 161, 0.849);
+    padding: 10px;
+    float: left;
+}
+
+.E {
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.233);
+    min-width: 20%;
+    border-style: double;
+    border-color: rgba(30, 255, 161, 0.849);
+    padding: 10px;
+    float: left;
+}
+
+.F {
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.233);
+    min-width: 20%;
+    border-style: double;
+    border-color: rgba(30, 255, 161, 0.849);
+    padding: 10px;
+    float: left;
+}
+
+ul {
+    font-size: 15px;
+    text-decoration: none;
+
+}
