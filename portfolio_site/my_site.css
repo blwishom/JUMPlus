@@ -1,14 +1,22 @@
 body {
-    background: rgb(68, 38, 28);
-    color: rgba(30, 255, 161, 0.849);
+    background-image: url('images/beautiful-ocean-pictures-33b2ht9d8bvriqu6.jpg');
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
 }
 
-audio {
+/* audio {
     border-color: rgba(30, 255, 161, 0.849);
     border-style: double;
     border-radius: 50%;
+} */
+
+audio {
+    width: 100%;
+    max-width: 300px;
+}
+
+audio::-webkit-media-controls {
+    display: none;
 }
 
 h1 {
@@ -27,12 +35,12 @@ h3 {
 }
 
 img {
-    display: block;
     width: 200px;
     height: auto;
-    border-radius: 100px;
+    border-radius: 20px;
     border-style: double;
-    border-color: rgba(30, 255, 161, 0.849);;
+    border-color: rgba(30, 255, 161, 0.849);
+    margin-bottom: 25px;
 }
 
 p {
@@ -40,52 +48,56 @@ p {
     max-width: 30%;
 }
 
-.C {
-    background-color: rgba(255, 255, 255, 0.233);
-    min-width: 20%;
-    border-style: double;
-    border-color: rgba(30, 255, 161, 0.849);
-    padding: 10px;
-    float: left;
-    cursor: pointer;
+.A {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
 }
 
-.C ul {
+.B {
+    background-color: black;
+    color: rgba(30, 255, 161, 0.849);
+    min-width: 20%;
+    border-radius: 20px;
+    border-style: double;
+    border-color: rgba(30, 255, 161, 1);
+    margin: 10px;
+    padding: 10px;
+}
+
+.B ul {
     display: none;
 }
 
-.C:hover ul {
+.B:hover ul {
     display: block;
 }
 
-.D {
-    display: grid;
-    background-color: rgba(255, 255, 255, 0.233);
+.C {
+    background-color: black;
+    color: rgba(30, 255, 161, 0.849);
     min-width: 20%;
+    border-radius: 20px;
     border-style: double;
     border-color: rgba(30, 255, 161, 0.849);
+    margin: 10px;
     padding: 10px;
-    float: left;
 }
 
-.E {
-    display: grid;
-    background-color: rgba(255, 255, 255, 0.233);
-    min-width: 20%;
-    border-style: double;
-    border-color: rgba(30, 255, 161, 0.849);
-    padding: 10px;
-    float: left;
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
 }
 
-.F {
-    display: grid;
-    background-color: rgba(255, 255, 255, 0.233);
-    min-width: 20%;
-    border-style: double;
-    border-color: rgba(30, 255, 161, 0.849);
-    padding: 10px;
-    float: left;
+.center-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    margin-top: 35px;
 }
 
 ul {
@@ -93,3 +105,72 @@ ul {
     text-decoration: none;
 
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the page takes at least the full viewport height */
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: rgba(30, 255, 161, 1);
+    color: rgb(68, 38, 28);
+    text-align: center;
+    padding: 3px;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    opacity: 1;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+/* .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    margin-top: 20px;
+}
+
+
+.carousel-slide {
+    text-align: center;
+}
+
+.carousel-slide img {
+    max-width: auto;
+    height: auto;
+    width: 90%;
+    max-height: 80vh;
+} */
