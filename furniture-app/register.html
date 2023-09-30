@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Furniture Store</title>
+    <title>Register - Furniture Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Login</h1>
+        <h1>Register</h1>
         <!-- Navigation bar -->
         <nav>
             <ul>
@@ -17,17 +17,19 @@
                 <!-- Add more links as needed -->
                 <li id="loginLink" style="display:none;"><a href="login.html">Login</a></li>
                 <li id="logoutLink" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
+                <li id="registerLink" style="display:none;"><a href="register.html">Register</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
-        <h2>Login to Your Account</h2>
-        <form id="loginForm">
-            <input type="text" id="usernameInput" placeholder="Username">
-            <input type="password" id="passwordInput" placeholder="Password">
-            <button type="submit" id="loginButton">Login</button>
+        <h2>Create an Account</h2>
+        <form id="registerForm">
+            <input type="text" id="usernameInput" placeholder="Username" required>
+            <input type="password" id="passwordInput" placeholder="Password" required>
+            <input type="password" id="confirmPasswordInput" placeholder="Confirm Password" required>
+            <button type="submit" id="registerButton">Register</button>
         </form>
     </div>
-    <script src="login.js"></script>
+    <script src="register.js"></script>
 </body>
 </html>

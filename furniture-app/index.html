@@ -9,13 +9,23 @@
 <body>
     <header>
         <h1>Furniture Store</h1>
+        <!-- Navigation bar -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <!-- Add more links as needed -->
+                <li id="loginLink" style="display:none;"><a href="login.html">Login</a></li>
+                <li id="logoutLink" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
+                <li id="registerLink" style="display:none;"><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
         <div id="userPanel">
             <span id="username"></span>
-            <button id="logoutButton">Logout</button>
         </div>
-        <a href="cart.html">View Cart</a>
     </header>
-    <div id="productList">
+    <div id="productList" class="container">
+        <!-- Product items will be displayed here -->
     </div>
     <script src="app.js"></script>
 </body>
