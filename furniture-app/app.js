@@ -80,12 +80,12 @@ function updateNavbar() {
 
     if (loggedInUser) {
         usernameElement.textContent = `Logged in as ${loggedInUser}`;
-        usernameElement.style.display = 'inline'; // Show username
+        usernameElement.style.display = 'inline';
         loginLink.style.display = 'none';
         registerLink.style.display = 'none';
         logoutLink.style.display = 'block';
     } else {
-        usernameElement.style.display = 'none'; // Hide username
+        usernameElement.style.display = 'none';
         loginLink.style.display = 'block';
         registerLink.style.display = 'block';
         logoutLink.style.display = 'none';
@@ -110,14 +110,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 };
                 localStorage.setItem('receipt', JSON.stringify(receipt));
 
-                // Create an order with the current date and cart contents
                 const order = {
                     date: new Date().toLocaleDateString(),
                     items: cart,
                     total: parseFloat(calculateTotal()),
                 };
 
-                // Add the order to the orders list
                 orders.push(order);
                 localStorage.setItem('orders', JSON.stringify(orders));
 
@@ -133,16 +131,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Function to handle logout
     function logout() {
-        // Remove the user's information from localStorage
         localStorage.removeItem('loggedInUser');
 
-        // Redirect the user to the login page or any other desired location
         location.href = 'login.html';
     }
 
-    // Add an event listener to the logout link
     document.getElementById('logoutLink').addEventListener('click', logout);
 
     updateNavbar();

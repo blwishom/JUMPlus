@@ -1,4 +1,3 @@
-// Create a new JavaScript file named receipt.js with the following content
 document.addEventListener('DOMContentLoaded', function () {
     const receiptData = localStorage.getItem('receipt');
 
