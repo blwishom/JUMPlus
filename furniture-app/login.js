@@ -9,11 +9,21 @@ function login(event) {
     const username = usernameInput.value;
     const password = passwordInput.value;
 
-    // You can implement your own authentication logic here
-    if (username === 'your_username' && password === 'your_password') {
+    // Simulate user authentication (Replace with your actual authentication logic)
+    const users = [
+        { username: 'user1', password: 'password1' },
+        { username: 'user2', password: 'password2' },
+        // Add more users as needed
+    ];
+
+    const authenticatedUser = users.find(user => user.username === username && user.password === password);
+
+    if (authenticatedUser) {
+        // Successful login
         localStorage.setItem('loggedInUser', username);
-        window.location.href = 'index.html'; // Redirect to the home page after successful login
+        location.href = 'index.html'; // Redirect to the home page
     } else {
+        // Failed login
         loginMessage.textContent = 'Invalid username or password. Please try again.';
     }
 }

@@ -8,24 +8,25 @@
 </head>
 <body>
     <header>
-        <h1>Login</h1>
         <!-- Navigation bar -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cart.html">Cart</a></li>
-                <!-- Add more links as needed -->
                 <li id="loginLink" style="display:none;"><a href="login.html">Login</a></li>
                 <li id="logoutLink" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
+                <li id="registerLink" style="display:none;"><a href="register.html">Register</a></li>
             </ul>
         </nav>
     </header>
+    <h1>Login</h1>
     <div class="container">
         <h2>Login to Your Account</h2>
         <form id="loginForm">
             <input type="text" id="usernameInput" placeholder="Username">
             <input type="password" id="passwordInput" placeholder="Password">
             <button type="submit" id="loginButton">Login</button>
+            <p id="loginMessage"></p>
         </form>
     </div>
     <script src="login.js"></script>
