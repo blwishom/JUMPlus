@@ -8,6 +8,7 @@ const products = [
 ];
 
 let cart = [];
+let orders = JSON.parse(localStorage.getItem('orders')) || [];
 
 function addToCart(productId) {
     const product = products.find(p => p.id === productId);
@@ -108,6 +109,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     total: calculateTotal(),
                 };
                 localStorage.setItem('receipt', JSON.stringify(receipt));
+
+                // Create an order with the current date and cart contents
+                const order = {
+                    date: new Date().toLocaleDateString(),
+                    items: cart,
+                    total: parseFloat(calculateTotal()),
+                };
+
+                // Add the order to the orders list
+                orders.push(order);
+                localStorage.setItem('orders', JSON.stringify(orders));
+
                 cart = [];
                 updateCart();
                 location.href = 'receipt.html';
