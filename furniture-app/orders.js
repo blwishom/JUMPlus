@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    document.getElementById('logoutLink').addEventListener('click', logout);
     // Update the navbar
     updateNavbar();
 

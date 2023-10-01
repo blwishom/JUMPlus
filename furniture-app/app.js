@@ -133,5 +133,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Function to handle logout
+    function logout() {
+        // Remove the user's information from localStorage
+        localStorage.removeItem('loggedInUser');
+
+        // Redirect the user to the login page or any other desired location
+        location.href = 'login.html';
+    }
+
+    // Add an event listener to the logout link
+    document.getElementById('logoutLink').addEventListener('click', logout);
+
     updateNavbar();
 });
