@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Furniture Store</title>
+    <title>Orders - Furniture Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,22 +11,15 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="login.html" id="loginLink">Login</a></li>
-                <li><a href="#" id="logoutLink" style="display: none;">Logout</a></li>
-                <li><a href="register.html" id="registerLink">Register</a></li>
                 <li><span id="username" style="display: none;"></span></li>
+                <li><a href="#" id="logoutLink">Logout</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Login</h1>
+    <h1>Your Orders</h1>
     <div class="container">
-        <h2>Login to Your Account</h2>
-        <form id="loginForm">
-            <input type="text" id="usernameInput" placeholder="Username">
-            <input type="password" id="passwordInput" placeholder="Password">
-            <button type="submit" id="loginButton">Login</button>
-            <p id="loginMessage"></p>
-        </form>
+        <div id="ordersList">
+        </div>
     </div>
     <footer>
         <a href="https://www.linkedin.com/in/blair-wishom-10a204b3/" target="_blank">
@@ -36,6 +29,6 @@
             <i class="fab fa-github"></i> GitHub
         </a>
     </footer>
-    <script src="login.js"></script>
+    <script src="orders.js"></script>
 </body>
 </html>

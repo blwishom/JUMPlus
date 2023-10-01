@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Furniture Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li id="loginLink" style="display:none;"><a href="login.html">Login</a></li>
+                <li id="logoutLink" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
+                <li id="registerLink" style="display:none;"><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Your Cart</h2>
+        <div id="cartItems">
+        </div>
+        <p id="cartTotal"></p>
+    </div>
+    <footer>
+        &copy; 2023 Furniture Store
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

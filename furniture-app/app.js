@@ -29,6 +29,14 @@ function emptyCart() {
     updateCart();
 }
 
+function calculateTotal() {
+    let total = 0;
+    cart.forEach(item => {
+        total += item.price;
+    });
+    return total.toFixed(2);
+}
+
 function updateCart() {
     const cartItems = document.getElementById('cartItems');
     const cartTotal = document.getElementById('cartTotal');
@@ -58,6 +66,31 @@ function updateCart() {
     cartTotal.textContent = `Total: $${total.toFixed(2)}`;
 }
 
+function isLoggedIn() {
+    return !!localStorage.getItem('loggedInUser');
+}
+
+function updateNavbar() {
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    const loginLink = document.getElementById('loginLink');
+    const registerLink = document.getElementById('registerLink');
+    const logoutLink = document.getElementById('logoutLink');
+    const usernameElement = document.getElementById('username');
+
+    if (loggedInUser) {
+        usernameElement.textContent = `Logged in as ${loggedInUser}`;
+        usernameElement.style.display = 'inline'; // Show username
+        loginLink.style.display = 'none';
+        registerLink.style.display = 'none';
+        logoutLink.style.display = 'block';
+    } else {
+        usernameElement.style.display = 'none'; // Hide username
+        loginLink.style.display = 'block';
+        registerLink.style.display = 'block';
+        logoutLink.style.display = 'none';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const productButtons = document.querySelectorAll('.product-item button');
     productButtons.forEach(button => {
@@ -66,35 +99,26 @@ document.addEventListener('DOMContentLoaded', function () {
             addToCart(productId);
         });
     });
-});
 
-// Add Buy button event listener
-document.getElementById('buyButton').addEventListener('click', function () {
-    if (cart.length > 0) {
-        // Create a receipt object with cart items and total
-        const receipt = {
-            items: cart,
-            total: calculateTotal(),
-        };
-
-        // Store the receipt in local storage
-        localStorage.setItem('receipt', JSON.stringify(receipt));
-
-        // Clear the cart
-        cart = [];
-        updateCart();
-
-        // Redirect to the receipt page
-        location.href = 'receipt.html';
-    } else {
-        alert('Your cart is empty. Add items before buying.');
-    }
-});
-
-function calculateTotal() {
-    let total = 0;
-    cart.forEach(item => {
-        total += item.price;
+    document.getElementById('buyButton').addEventListener('click', function () {
+        if (isLoggedIn()) {
+            if (cart.length > 0) {
+                const receipt = {
+                    items: cart,
+                    total: calculateTotal(),
+                };
+                localStorage.setItem('receipt', JSON.stringify(receipt));
+                cart = [];
+                updateCart();
+                location.href = 'receipt.html';
+            } else {
+                alert('Your cart is empty. Add items before buying.');
+            }
+        } else {
+            alert('Please login to make a purchase.');
+            location.href = 'login.html';
+        }
     });
-    return total.toFixed(2);
-}
+
+    updateNavbar();
+});
