@@ -1,9 +1,10 @@
+<!-- Create a new HTML file named receipt.html with the following content -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Furniture Store</title>
+    <title>Receipt</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,19 +12,16 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Register</h1>
+    <h1>Order Receipt</h1>
     <div class="container">
-        <h2>Create an Account</h2>
-        <form id="registerForm">
-            <input type="text" id="usernameInput" placeholder="Username" required>
-            <input type="password" id="passwordInput" placeholder="Password" required>
-            <input type="password" id="confirmPasswordInput" placeholder="Confirm Password" required>
-            <button type="submit" id="registerButton">Register</button>
-        </form>
+        <h2>Your Order Details</h2>
+        <div id="orderItems">
+            <!-- Order items will be displayed here -->
+        </div>
+        <p id="orderTotal">Total: $0.00</p>
     </div>
     <footer>
         <a href="https://www.linkedin.com/in/blair-wishom-10a204b3/" target="_blank">
@@ -33,6 +31,6 @@
             <i class="fab fa-github"></i> GitHub
         </a>
     </footer>
-    <script src="register.js"></script>
+    <script src="receipt.js"></script>
 </body>
 </html>
