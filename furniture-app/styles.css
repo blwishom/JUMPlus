@@ -164,19 +164,28 @@ input[type="password"] {
     background-color: #0056b3;
 }
 
-/* Style for cart items and total */
-#cartItems {
-    padding: 20px;
+/* Style for cart */
+.cart {
+    position: fixed;
+    bottom: 40px; /* Adjust to position the cart 20px above the footer */
+    right: 10px;
+    width: 300px; /* Adjust the width as needed */
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; /* Add rounded corners */
+}
+
+/* Style for cart items and total */
+#cartItems {
+    padding: 10px 0;
 }
 
 #cartTotal {
     text-align: right;
     font-weight: bold;
-    padding: 10px;
+    margin-top: 10px;
 }
 
 /* Style for the footer */
@@ -188,4 +197,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
 }
