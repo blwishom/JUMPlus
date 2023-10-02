@@ -1,7 +1,9 @@
-document.getElementById('registerButton').addEventListener('click', () => {
-    const username = document.getElementById('usernameInput').value;
+document.getElementById('registerButton').addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
 
-    if (username.trim() === '') {
+    const username = document.getElementById('usernameInput').value.trim();
+
+    if (username === '') {
         alert('Please enter a valid username.');
         return;
     }
@@ -13,6 +15,6 @@ document.getElementById('registerButton').addEventListener('click', () => {
         users.push(username);
         localStorage.setItem('registeredUsers', JSON.stringify(users));
         alert('Registration successful! You can now login.');
-        window.location.href = 'login.html';
+        window.location.href = 'login.html'; // Redirect to login.html
     }
 });
